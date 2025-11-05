@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz - QuizMaster</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body id="quiz-page">
+
+<nav class="navbar">
+    <div class="logo">QuizMaster</div>
+    <ul class="nav-links">
+        <li><a href="studentDashboard.html">Dashboard</a></li>
+        <li><a href="result.html">Results</a></li>
+        <li><a href="login.html">Logout</a></li>
+    </ul>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+</nav>
+
+<section class="quiz-grid">
+    <div class="question-card" style="width: 100%; max-width: 900px; margin: 20px auto; padding: 30px;">
+        <h2>Start Your Quiz!</h2>
+        <p id="quiz-title-display" style="font-size: 1.2rem; color: #FFC107; margin-bottom: 20px;">Subject: Loading...</p>
+        
+        <form id="quiz-form">
+            <div id="questions-container">
+                <p>Loading questions...</p>
+            </div>
+            
+            <hr style="margin-top: 30px; border-color: #333;">
+            <button type="submit" id="submit-quiz" class="btn" style="width: 100%; margin-top: 20px;">
+                Submit Quiz 🎯
+            </button>
+        </form>
+
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

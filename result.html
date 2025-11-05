@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Result - QuizMaster</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body id="result-page">
+
+<nav class="navbar">
+    <div class="logo">QuizMaster</div>
+    <ul class="nav-links">
+        <li><a href="studentDashboard.html">Dashboard</a></li>
+        <li><a href="quiz.html">Take Quiz</a></li>
+        <li><a href="login.html">Logout</a></li>
+    </ul>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+</nav>
+
+<section class="quiz-grid">
+    <div class="result-card" id="result-card">
+        <h2 id="result-title">Loading Result...</h2>
+        <img src="images/confetti.gif" alt="Celebration" class="result-img">
+        <p>Quiz: <span id="quiz-title"></span></p>
+        <p>Total Score: <span id="score">0/0</span></p>
+        <p>Correct Answers: <span id="correct">0</span></p>
+        <p>Time Taken: <span id="time">0m 0s</span></p>
+        <a href="studentDashboard.html" class="btn">Go Back 🚀</a>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

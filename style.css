@@ -1,0 +1,376 @@
+/* Reset & Body */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { 
+    font-family: 'Open Sans', sans-serif; 
+    /* NEW: Deep Navy Blue Background */
+    background: #0A192F; 
+    /* NEW: Soft White Text */
+    color: #CCD6F6;
+    line-height: 1.6;
+}
+a { text-decoration: none; color: #CCD6F6; }
+ul { list-style: none; }
+
+/* Buttons */
+.btn {
+    padding: 12px 25px; border: none; border-radius: 50px; cursor: pointer;
+    font-weight: 600; transition: 0.3s; 
+    /* NEW: Primary Accent Gold */
+    background: #FFCC00; 
+    color: #0A192F; /* Dark text on bright button */
+}
+/* NEW: Button Hover */
+.btn:hover { background: #CC9900; transform: translateY(-2px); color: #0A192F; }
+/* Specific button colors (Success/Danger/Primary Action) */
+.btn-success { background: #4CAF50; color: #fff; }
+.btn-success:hover { background: #388E3C; }
+/* Primary Action Button (for emphasis where gold doesn't work, e.g., Manage Questions) */
+.btn-primary-accent { background: #4E87F7; color: #fff; }
+.btn-primary-accent:hover { background: #3C71DC; }
+.btn-danger { background: #dc3545; color: #fff; }
+.btn-danger:hover { background: #C62828; }
+
+/* Navbar */
+.navbar {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 15px 10%; 
+    /* NEW: Dark Card Background */
+    background: #112240; 
+    color: #CCD6F6;
+    position: fixed; width: 100%; top: 0; z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+}
+.navbar .logo { font-size: 28px; font-weight: 700; }
+.nav-links { display: flex; gap: 25px; }
+.nav-links li a { font-weight: 600; transition: 0.3s; }
+/* NEW: Accent for hover */
+.nav-links li a:hover { color: #FFCC00; } 
+.menu-toggle { display: none; font-size: 28px; cursor: pointer; }
+
+/* Hero Section */
+#hero {
+    /* NEW: Deep Blue to Accent Blue Gradient */
+    background: linear-gradient(135deg, #0A192F 0%, #112240 100%);
+    padding: 200px 20px 100px 20px; text-align: center; color: #CCD6F6;
+    position: relative; overflow: hidden;
+}
+#hero h1 { font-size: 3rem; font-weight: 700; margin-bottom: 20px; }
+/* NEW: Gold Accent */
+#hero h1 span { color: #FFCC00; } 
+#hero p { font-size: 1.3rem; margin-bottom: 30px; }
+.hero-img { max-width: 500px; margin-top: 30px; animation: float 3s ease-in-out infinite; }
+@keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-15px);} }
+
+/* Features */
+#features { display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; padding: 80px 10%; }
+.feature-card {
+    /* NEW: Dark Card Background */
+    background: #112240; 
+    padding: 30px; border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4); flex: 1 1 250px; text-align: center; transition: 0.3s;
+    color: #CCD6F6;
+}
+.feature-card:hover { transform: translateY(-5px); }
+
+/* Auth section layout */
+.auth-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 100px 20px;
+    flex-wrap: wrap;
+}
+.auth-card {
+    /* NEW: Dark Card Background */
+    background: #112240; 
+    padding: 50px; border-radius: 25px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5); width: 350px;
+    display: flex; flex-direction: column; gap: 20px; 
+    color: #CCD6F6;
+}
+.auth-card h2 { font-size: 28px; margin-bottom: 10px; }
+.auth-card p { font-size: 14px; color: #8892B0; }
+.auth-card input, .auth-card select {
+    padding: 15px; border-radius: 12px; border: 1px solid #333; width: 100%; font-size: 16px;
+    /* NEW: Primary Background */
+    background: #0A192F; 
+    color: #CCD6F6;
+}
+/* NEW: Accent border focus */
+.auth-card input:focus, .auth-card select:focus { border-color: #FFCC00; outline: none; } 
+.auth-img img { max-width: 400px; border-radius: 20px; animation: float 4s ease-in-out infinite; }
+
+/* Dashboard & Quiz Cards */
+.admin-cards, .quiz-grid, .admin-grid-layout { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    padding: 40px 10%; 
+    justify-content: center; 
+    padding-top: 100px; 
+}
+.admin-card, .quiz-card, .question-card, .result-card {
+    /* NEW: Dark Card Background */
+    background: #112240; 
+    padding: 25px; border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5); text-align: center; flex: 1 1 200px; transition: 0.3s;
+}
+
+.admin-grid-layout {
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.admin-card:hover, .quiz-card:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 12px 25px rgba(0,0,0,0.6); }
+
+/* Quiz Card Customizations */
+.quiz-card {
+    /* NEW: Slightly Lighter Card for distinction */
+    background: #172A45; 
+    padding: 30px;
+    border-radius: 20px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.quiz-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.7);
+}
+.quiz-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    /* NEW: Accent Gold for titles/emphasis */
+    color: #FFCC00; 
+}
+.quiz-card p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #CCD6F6;
+}
+.quiz-card .btn { width: 100%; }
+
+/* Dashboard Header */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    /* NEW: Dark Card Background */
+    background: #112240; 
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Correct/Incorrect */
+/* NEW: Standard Muted Green */
+.correct { color: #4CAF50; font-weight: bold; } 
+.incorrect { color: #FF4C4C; font-weight: bold; }
+
+/* Result Images */
+.result-img { width: 150px; display: block; margin: 20px auto; }
+
+/* Testimonial Section Styling */
+#testimonials {
+    color: #CCD6F6;
+    /* NEW: Dark Card Background for section */
+    background: #112240 !important; 
+}
+#testimonials .reviews-grid {
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 30px;
+    margin-top: 40px;
+}
+.review-card {
+    flex: 1 1 300px; 
+    max-width: 350px;
+    text-align: left;
+    /* NEW: Accent Border Gold */
+    border-top: 5px solid #FFCC00; 
+    transition: transform 0.3s;
+    padding: 30px; 
+}
+.review-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 12px 25px rgba(0,0,0,0.7);
+}
+
+/* Review Card Header Styling for Avatar */
+.review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.review-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    margin-right: 15px;
+    object-fit: cover;
+    /* NEW: Link Blue Border */
+    border: 2px solid #4E87F7; 
+}
+.review-info {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Responsive */
+@media(max-width:900px){
+    .auth-section { flex-direction: column; gap: 30px; }
+    .auth-img img { max-width: 300px; }
+}
+@media(max-width:768px){
+    .nav-links{position:absolute; top:60px; right:-100%; background:rgba(0,0,0,0.9); flex-direction:column; width:200px; padding:20px; transition:right 0.3s;}
+    .nav-links.active{right:0;}
+    .menu-toggle{display:block;}
+    /* Updated selector for responsive stacking */
+    #features, .admin-cards, .quiz-grid, .admin-grid-layout { flex-direction: column; } 
+    #hero{padding:150px 20px 80px 20px;}
+}
+/* ============================= */
+/* ✅ ADDED STYLES FOR NEW SECTIONS */
+/* ============================= */
+
+/* About Section */
+.about-section {
+    background: #112240;
+    color: #CCD6F6;
+    padding: 100px 10%;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+.about-section h2 {
+    font-size: 2.2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #FFCC00; /* Accent Gold */
+    margin-bottom: 20px;
+}
+.about-section p {
+    max-width: 800px;
+    margin: 10px auto;
+    font-size: 1.1rem;
+    color: #A8B2D1;
+    line-height: 1.8;
+}
+
+/* Contact Section */
+.contact-section {
+    background: #0A192F;
+    padding: 100px 10%;
+    text-align: center;
+    color: #CCD6F6;
+}
+.contact-section h2 {
+    font-size: 2.2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #FFCC00;
+    margin-bottom: 20px;
+}
+.contact-section p {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+    color: #A8B2D1;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.contact-form input,
+.contact-form textarea {
+    background: #112240;
+    border: 1px solid #233554;
+    color: #CCD6F6;
+    border-radius: 12px;
+    padding: 15px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #FFCC00;
+    outline: none;
+}
+.contact-form .btn {
+    background: #FFCC00;
+    color: #0A192F;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.contact-form .btn:hover {
+    background: #CC9900;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+.footer {
+    background: #112240;
+    color: #CCD6F6;
+    text-align: center;
+    padding: 20px 10px;
+    border-top: 2px solid #233554;
+    font-size: 0.9rem;
+}
+.footer p {
+    margin: 0;
+    color: #A8B2D1;
+}
+
+/* Responsive Adjustments */
+@media(max-width:768px){
+    .about-section, .contact-section {
+        padding: 60px 20px;
+    }
+    .contact-form { width: 100%; }
+}
+/* FAQ Section */
+.faq-section {
+    background: #112240;
+    padding: 100px 10%;
+    text-align: center;
+    color: #CCD6F6;
+}
+.faq-section h2 {
+    font-size: 2.2rem;
+    color: #FFCC00;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 40px;
+}
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+.faq-item {
+    background: #172A45;
+    padding: 20px 25px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    transition: transform 0.3s;
+}
+.faq-item:hover {
+    transform: translateY(-5px);
+}
+.faq-item h3 {
+    color: #FFCC00;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+.faq-item p {
+    color: #A8B2D1;
+    font-size: 1rem;
+    line-height: 1.6;
+}

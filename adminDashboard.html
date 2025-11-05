@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard - QuizMaster</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body id="admin-dashboard">
+
+<nav class="navbar">
+    <div class="logo">QuizMaster</div>
+    <ul class="nav-links">
+        <li><a href="quizManagement.html">Quiz Management</a></li>
+        <li><a href="userManagement.html">User Management</a></li>
+        <li><a href="login.html">Logout</a></li>
+    </ul>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+</nav>
+
+<section class="admin-cards">
+    <div class="admin-card">
+        <h3>👥 Total Users</h3>
+        <p id="total-users">Loading...</p>
+    </div>
+    <div class="admin-card">
+        <h3>📝 Active Quizzes</h3>
+        <p id="active-quizzes">Loading...</p>
+    </div>
+    <div class="admin-card">
+        <h3>📊 Recent Results</h3>
+        <p id="recent-results">Loading...</p>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
